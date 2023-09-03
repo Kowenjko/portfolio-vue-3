@@ -20,6 +20,7 @@ const form: IFormAuth = reactive({
   logIn: getUser.value?.logIn || '',
   password: '',
   confirmPassword: '',
+  messages: [],
   isRemember: false,
   domainUrl: location.origin,
   showLogIn: 'none',

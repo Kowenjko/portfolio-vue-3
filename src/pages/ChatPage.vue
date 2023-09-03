@@ -72,7 +72,7 @@ const sendQuestion = async (quastion: string) => {
           <Button @click="clearMessages">Clear Chat</Button>
         </div>
         <NoMessage v-if="noMessages" />
-        <OutputMessage class="chat-output" v-else :messages="userInfo?.messages" />
+        <OutputMessage class="chat-output" v-if="userInfo?.messages" :messages="userInfo.messages" />
         <InputMessage
           :class="[isGenerate ? 'opacity-0' : 'opacity-100']"
           class="chat-input"
