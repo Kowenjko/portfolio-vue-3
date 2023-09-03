@@ -13,7 +13,7 @@ import { sendTelegram } from '@/api/services/TelegramService'
 
 const loadingEmail = ref(false)
 const loadingTelegram = ref(false)
-const statusSend = ref < unknown > ''
+const statusSend = ref('')
 
 const form = reactive({
   name: '',
