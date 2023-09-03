@@ -26,6 +26,7 @@ const form: IFormAuth = reactive({
   logIn: '',
   password: '',
   confirmPassword: '',
+  messages: [],
   isRemember: false,
   domainUrl: location.origin,
   showLogIn: 'block',

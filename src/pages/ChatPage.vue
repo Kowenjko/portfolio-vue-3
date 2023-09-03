@@ -40,7 +40,7 @@ const sendQuestion = async (quastion: string) => {
     quastion: quastion,
     isTyping: true,
   }
-  users.value[userIndex.value]?.messages.push(newMessage)
+  users.value[userIndex.value].messages.push(newMessage)
   scrollChat()
 
   // const answer = await getAnswerGPT(quastion)

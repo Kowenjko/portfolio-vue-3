@@ -11,7 +11,7 @@ export interface IFormAuth {
   logIn: string
   password: string
   confirmPassword: string
-  messages?: IMessage[]
+  messages: IMessage[]
   domainUrl?: string
   isRemember: boolean
   showLogIn?: string
