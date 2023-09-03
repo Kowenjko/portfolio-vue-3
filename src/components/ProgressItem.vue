@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Developer } from '@/interfaces/Progress'
+import type { Developer } from '@/interfaces/Progress'
 
 interface Props {
   developers: Developer[]

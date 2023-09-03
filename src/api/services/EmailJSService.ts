@@ -1,6 +1,6 @@
 import emailjs from '@emailjs/browser'
 import { paramsEmailJS } from '@/configs/configApi'
-import { IForm, IFormAuth } from '@/interfaces/Form'
+import type { IForm, IFormAuth } from '@/interfaces/Form'
 
 const { serviceID, templateSendID, templateAuthID, userID } = paramsEmailJS
 
@@ -11,8 +11,8 @@ const getTemplateId = (action: templateAction) => {
   if (action === 'sendEmailAuth') return templateAuthID
 }
 
-export const sendEmail = async (action: templateAction = 'sendEmail', templateParams: IForm | IFormAuth) => {
-  const templateID: string = getTemplateId(action)
+export const sendEmail = async (action: templateAction = 'sendEmail', templateParams: any) => {
+  const templateID: string = getTemplateId(action) || ''
 
   try {
     const request = await emailjs.send(serviceID, templateID, templateParams, userID)

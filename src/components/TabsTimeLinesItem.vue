@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { QualificationDetail } from '@/interfaces/QualificationInterface'
+import type { QualificationDetail } from '@/interfaces/QualificationInterface'
 
 interface Props {
   item: QualificationDetail

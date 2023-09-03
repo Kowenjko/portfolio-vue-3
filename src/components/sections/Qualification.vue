@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TitleCategory from '@/components/TitleCategory.vue'
 import TabsQualification from '@/components/TabsQualification.vue'
-import { Qualification } from '@/interfaces/QualificationInterface'
+import type { Qualification } from '@/interfaces/QualificationInterface'
 
 const qualification: Qualification = {
   educations: [

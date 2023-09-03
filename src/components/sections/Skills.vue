@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TitleCategory from '@/components/TitleCategory.vue'
 import AccordionProgress from '@/components/AccordionProgress.vue'
-import { Progress } from '@/interfaces/Progress'
+import type { Progress } from '@/interfaces/Progress'
 
 const progressFrontent: Progress = {
   start: true,

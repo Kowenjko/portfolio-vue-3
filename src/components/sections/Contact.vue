@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import FormContact from '../FormContact.vue'
-import { Contact } from '@/interfaces/ContactInterface'
+import type { Contact } from '@/interfaces/ContactInterface'
 const contacts: Contact[] = [
   { name: 'Address', info: 'Rivne', icon: 'uil-location-point' },
   {

@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import TabsQualificationTitle from './TabsQualificationTitle.vue'
 import TabsTimeLines from './TabsTimeLines.vue'
-import { Qualification } from '@/interfaces/QualificationInterface'
+import type { Qualification } from '@/interfaces/QualificationInterface'
 
 interface Props {
   qualification: Qualification

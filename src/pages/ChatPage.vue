@@ -10,7 +10,7 @@ import { getAnswerGPT } from '@/api/services/ChatGPTService'
 import { useAuth } from '@/composables/useAuth'
 
 import { useAutoScrollChat } from '@/composables/useAutoScrollChat'
-import { IMessage } from '@/interfaces/Messages'
+import type { IMessage } from '@/interfaces/Messages'
 import { v4 as uuidv4 } from 'uuid'
 
 const isGenerate = ref(false)
@@ -23,7 +23,10 @@ const answer =
 
 const noMessages = computed(() => userInfo.value?.messages?.length === 0)
 
-const getMessageIndex = (id: string) => userInfo.value?.messages.findIndex((message: IMessage) => message.id === id)
+const getMessageIndex = (id: string) => {
+  if (userInfo.value?.messages) return userInfo.value.messages.findIndex((message: IMessage) => message.id === id)
+  return -1
+}
 const clearMessages = () => (users.value[userIndex.value].messages = [])
 
 const sendQuestion = async (quastion: string) => {
@@ -37,8 +40,7 @@ const sendQuestion = async (quastion: string) => {
     quastion: quastion,
     isTyping: true,
   }
-
-  users.value[userIndex.value].messages.push(newMessage)
+  users.value[userIndex.value]?.messages.push(newMessage)
   scrollChat()
 
   // const answer = await getAnswerGPT(quastion)

@@ -7,7 +7,7 @@ import Button from './UI/Button.vue'
 
 import { helpers, email, required } from '@vuelidate/validators'
 import useVuelidate from '@vuelidate/core'
-import { IFormAuth } from '@/interfaces/Form'
+import type { IFormAuth } from '@/interfaces/Form'
 
 const isOpen = ref(false)
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { Progress } from '@/interfaces/Progress'
+import type { Progress } from '@/interfaces/Progress'
 import ProgressItem from './ProgressItem.vue'
 import { getYearsAtWork } from '@/helpers/dates'
 

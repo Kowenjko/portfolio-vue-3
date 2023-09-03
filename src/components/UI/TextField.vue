@@ -1,4 +1,4 @@
-<script setup>
+<script setup >
 import { ref } from 'vue'
 import { EyeIcon, EyeSlashIcon } from '@heroicons/vue/24/solid'
 

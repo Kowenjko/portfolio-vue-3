@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NavigationLink } from '@/interfaces/Navigation'
+import type { NavigationLink } from '@/interfaces/Navigation'
 import { ref, watch } from 'vue'
 import { useWindowScroll } from '@vueuse/core'
 import { useRoute } from 'vue-router'
@@ -18,7 +18,7 @@ const { y: scrollY } = useWindowScroll()
 const { auth } = useAuth()
 
 const activeLinkNavigation = (): any => {
-  const anchors = document.querySelectorAll<HTMLElement>('.anchor')
+  const anchors: NodeListOf<HTMLElement> = document.querySelectorAll('.anchor') as NodeListOf<HTMLElement>
   const sections: HTMLElement[] = [...anchors].filter((elem: HTMLElement) => elem.hasAttribute('id'))
 
   sections.forEach((current: HTMLElement) => {

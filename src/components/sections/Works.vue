@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TitleCategory from '@/components/TitleCategory.vue'
 import Slides from '@/components/UI/Slides.vue'
-import { Project } from '@/interfaces/ProjectsInterface'
+import type { Project } from '@/interfaces/ProjectsInterface'
 const workProjects: Project[] = [
   {
     title: 'Jounce',

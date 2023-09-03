@@ -1,3 +1,5 @@
+import type { IMessage } from '@/interfaces/Messages'
+
 export interface IForm {
   name: string
   email: string
@@ -9,7 +11,7 @@ export interface IFormAuth {
   logIn: string
   password: string
   confirmPassword: string
-  messages?: Array
+  messages?: IMessage[]
   domainUrl?: string
   isRemember: boolean
   showLogIn?: string

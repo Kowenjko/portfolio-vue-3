@@ -2,7 +2,7 @@
 import ChatMessege from './ChatMessege.vue'
 import CopyClipboardToast from '@/components/UI/CopyClipboardToast.vue'
 
-import { IMessage } from '@/interfaces/Messages'
+import type { IMessage } from '@/interfaces/Messages'
 import { useClipboard } from '@vueuse/core'
 const { copy, copied } = useClipboard()
 

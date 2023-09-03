@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TabsTimeLinesItem from './TabsTimeLinesItem.vue'
 import TimeLines from './TimeLines.vue'
-import { QualificationDetail } from '@/interfaces/QualificationInterface'
+import type { QualificationDetail } from '@/interfaces/QualificationInterface'
 
 interface Props {
   lists: QualificationDetail[]

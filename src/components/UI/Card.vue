@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Project } from '@/interfaces/ProjectsInterface'
+import type { Project } from '@/interfaces/ProjectsInterface'
 
 interface Props {
   project: Project

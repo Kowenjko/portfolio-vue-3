@@ -1,6 +1,6 @@
 <template>
   <div class="no-message">
-    <img width="35" class="avatar" src="chat-gpt.png" alt="avatar" />
+    <img width="35" class="avatar" src="/public/chat-gpt.png" alt="avatar" />
     <h2 class="title">Please talk to me</h2>
   </div>
 </template>

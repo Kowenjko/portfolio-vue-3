@@ -4,7 +4,7 @@ import LogIn from '@/components/LogIn.vue'
 import SignUp from '@/components/SignUp.vue'
 
 import { useStorage } from '@vueuse/core'
-import { IFormAuth } from '@/interfaces/Form'
+import type { IFormAuth } from '@/interfaces/Form'
 import { sendEmail } from '@/api/services/EmailJSService'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -43,7 +43,7 @@ export function useAuth() {
 
   const userInfo = computed(() => users.value.find((user) => user.id === auth.value.id))
   const getUser = computed(() => users.value.find((user) => user.id === recoveryUser.value.id))
-  const userIndex = computed(() => getUserIndex(userInfo.value?.id))
+  const userIndex = computed(() => getUserIndex(userInfo.value?.id || ''))
 
   /**
    * function for user login

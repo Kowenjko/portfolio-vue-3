@@ -4,8 +4,9 @@ import Card from './Card.vue'
 import SlidesButtons from './SlidesButtons.vue'
 import ModalPortfolio from '../ModalPortfolio.vue'
 
-import { Project } from '@/interfaces/ProjectsInterface'
-import { useWindowSize, useSwipe, UseSwipeDirection } from '@vueuse/core'
+import type { Project } from '@/interfaces/ProjectsInterface'
+import { useWindowSize, useSwipe } from '@vueuse/core'
+import type { UseSwipeDirection } from '@vueuse/core'
 
 interface Props {
   projects: Project[]

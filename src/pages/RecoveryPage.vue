@@ -8,7 +8,7 @@ import Button from '@/components/UI/Button.vue'
 import Footer from '@/components/sections/Footer.vue'
 
 import { useAuth } from '@/composables/useAuth'
-import { IFormAuth } from '@/interfaces/Form'
+import type { IFormAuth } from '@/interfaces/Form'
 import { helpers, minLength, required, sameAs } from '@vuelidate/validators'
 import useVuelidate from '@vuelidate/core'
 

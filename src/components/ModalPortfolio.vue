@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import Modal from './UI/Modal.vue'
-import { Project } from '@/interfaces/ProjectsInterface'
+import type { Project } from '@/interfaces/ProjectsInterface'
 
 interface Props {
   project: Project

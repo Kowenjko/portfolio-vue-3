@@ -1,4 +1,4 @@
-<script setup>
+<script setup >
 const props = defineProps({
   modelValue: { type: String, default: '' },
   name: { type: String, default: 'message' },

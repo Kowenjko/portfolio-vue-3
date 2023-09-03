@@ -13,7 +13,7 @@ import { sendTelegram } from '@/api/services/TelegramService'
 
 const loadingEmail = ref(false)
 const loadingTelegram = ref(false)
-const statusSend = ref('')
+const statusSend = ref < unknown > ''
 
 const form = reactive({
   name: '',
@@ -53,7 +53,7 @@ const clearForm = () => {
 const onSendEmail = async () => {
   if (checkForm()) return
   loadingEmail.value = true
-  statusSend.value = await sendEmail(form)
+  statusSend.value = await sendEmail('sendEmail', form)
   loadingEmail.value = false
   clearForm()
 }

@@ -11,7 +11,7 @@ import SignUp from '../SignUp.vue'
 import ForgotPassword from '../ForgotPassword.vue'
 
 import { useAuth } from '@/composables/useAuth'
-import { NavigationLink } from '@/interfaces/Navigation'
+import type { NavigationLink } from '@/interfaces/Navigation'
 
 const forgotPasswordRef = ref<InstanceType<typeof ForgotPassword> | null>(null)
 

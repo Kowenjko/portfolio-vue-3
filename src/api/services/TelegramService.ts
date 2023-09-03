@@ -1,5 +1,5 @@
 import { telegramUrl } from '@/configs/configApi'
-import { IForm } from '@/interfaces/Form'
+import type { IForm } from '@/interfaces/Form'
 
 export const sendTelegram = async (form: IForm) => {
   const dataJSON: string = JSON.stringify(form)
