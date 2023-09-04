@@ -60,7 +60,7 @@ export function useAuth() {
     )
 
     if (checkUser.length > 0) {
-      const index = getUserIndex(checkUser[0].id)
+      const index = getUserIndex(checkUser[0].id || '')
 
       users.value[index].isRemember = form.isRemember
       const { id, isRemember } = users.value[index]
