@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount, onUnmounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 import HeaderNavigation from '@/components/HeaderNavigation.vue'
@@ -67,13 +67,6 @@ const openForgotPassword = () => {
 // onMounted(() => {
 //   if (!auth.value.isRemember) auth.value = authDefault
 // })
-
-onBeforeUnmount(() => {
-  console.log('onBeforeUnmount')
-})
-onUnmounted(() => {
-  console.log('onUnmounted')
-})
 </script>
 
 <template>

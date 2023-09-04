@@ -60,7 +60,7 @@ export function useAuth() {
     )
 
     if (checkUser.length > 0) {
-      const index = getUserIndex(checkUser[0].id || '')
+      const index = getUserIndex(checkUser[0].id)
 
       users.value[index].isRemember = form.isRemember
       const { id, isRemember } = users.value[index]
@@ -69,7 +69,13 @@ export function useAuth() {
 
       logInRef.value?.closeModal()
 
-      await sendEmail('sendEmailAuth', form)
+      const message = {
+        name: form.logIn,
+        email: form.logIn,
+        message: 'This user has logged into the portfolio',
+      }
+
+      await sendEmail('sendEmail', message)
       return
     }
 
@@ -100,7 +106,9 @@ export function useAuth() {
     isLoading.value = true
 
     users.value.push({ ...newUser })
+    await sendEmail('sendEmailAuth', form)
     await authUser(form)
+
     isLoading.value = false
     signUpRef.value?.closeModal()
   }
