@@ -30,7 +30,7 @@ const cardTransform = computed(() => {
           <div class="hero__wrapper__left-back"></div>
           <div class="hero__wrapper__left-image" ref="avtarRef" :style="{ transform: cardTransform }">
             <div class="avatar">
-              <img src="/i-3.webp" alt="Kovenko" />
+              <img src="/i-4.webp" alt="Kovenko" />
             </div>
             <img class="lines" src="/lines.webp" alt="line" />
           </div>
