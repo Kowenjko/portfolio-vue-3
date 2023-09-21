@@ -43,24 +43,29 @@ const sendQuestion = async (quastion: string) => {
   users.value[userIndex.value].messages.push(newMessage)
   scrollChat()
 
-  // const answer = await getAnswerGPT(quastion)
+  const index = getMessageIndex(newMessage.id)
+  const messages = users.value[userIndex.value].messages
 
-  // if (answer && !noMessages.value) {
-  //   messages.value.at(-1).answer = answerGPT.answer
-  //   messages.value.at(-1).isTyping = false
-  // } else {
-  //   messages.value.pop()
-  // }
+  const answerGpt = await getAnswerGPT(quastion)
+  const answer = await answerGpt.answer
 
-  setTimeout(() => {
-    const index = getMessageIndex(newMessage.id)
-
-    const messages = users.value[userIndex.value].messages
-
+  if (answer && !noMessages.value) {
     users.value[userIndex.value].messages[index] = { ...messages[index], answer, isTyping: false }
+
     isGenerate.value = false
-    scrollChat()
-  }, 2000)
+  } else {
+    users.value[userIndex.value].messages.pop()
+  }
+  scrollChat()
+  //   setTimeout(() => {
+  //     const index = getMessageIndex(newMessage.id)
+
+  //     const messages = users.value[userIndex.value].messages
+
+  //     users.value[userIndex.value].messages[index] = { ...messages[index], answer, isTyping: false }
+  //     isGenerate.value = false
+  //     scrollChat()
+  //   }, 2000)
 }
 
 watch(isAvailableMessages, () => window.scrollTo({ top: 0 }))
@@ -70,9 +75,9 @@ watch(isAvailableMessages, () => window.scrollTo({ top: 0 }))
   <section class="chat">
     <div class="chat-wrapper container">
       <div class="messages">
-        <div v-show="!noMessages && !isGenerate " class="messages__clear-button">
+        <!-- <div v-show="!noMessages && !isGenerate " class="messages__clear-button">
           <Button @click="clearMessages">Clear Chat</Button>
-        </div>
+        </div> -->
         <InfoMessage v-if="noMessages" text="Please talk to me" />
         <InfoMessage v-if="isAvailableMessages" text="Sorry, your question limit has been reached" />
         <OutputMessage class="chat-output" v-if="userInfo?.messages" :messages="userInfo.messages" />
