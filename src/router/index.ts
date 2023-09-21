@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/pages/HomePage.vue'
 import ChatPage from '@/pages/ChatPage.vue'
 import RecoveryPage from '@/pages/RecoveryPage.vue'
@@ -8,7 +8,7 @@ import { useAuth } from '@/composables/useAuth'
 const { auth, recoveryUser } = useAuth()
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
