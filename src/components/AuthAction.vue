@@ -17,15 +17,15 @@ const openLogIn = () => emit('openLogIn')
 </script>
 
 <template>
-  <div v-if="userInfo?.id">
-    <span class="dark:text-white">{{ userInfo.logIn }} | </span>
+  <div v-if="userInfo?.id" class="text-center mb-4 md:mb-0">
+    <span class="dark:text-white text-sm md:text-base">{{ userInfo.logIn }} | </span>
     <button class="logo" @click="logOut">Log out</button>
   </div>
-  <button v-else @click="openLogIn" class="logo">Log in</button>
+  <button v-else @click="openLogIn" class="logo w-full">Log in</button>
 </template>
 
 <style lang="scss" scoped>
 .logo {
-  @apply font-bold dark:text-white hover:text-blue-1 dark:hover:text-blue-1  transition-all;
+  @apply font-bold dark:text-white hover:text-blue-1 dark:hover:text-blue-1  transition-all text-sm md:text-base text-center mb-4 md:mb-0;
 }
 </style>

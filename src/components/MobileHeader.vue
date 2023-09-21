@@ -33,10 +33,9 @@ const logOut = () => emit('logOut')
     <div class="sidebar__wrapper" :class="[showSidebar ? ' w-[60%]' : ' w-0']">
       <div class="sidebar__wrapper-top">
         <SwitchTheme />
-        <AuthAction :userInfo="userInfo" @log-out="logOut" @open-log-in="openLogIn" />
         <CloseButton @click="closeSidebar" color="black" />
       </div>
-
+      <AuthAction :userInfo="userInfo" @log-out="logOut" @open-log-in="openLogIn" />
       <div class="sidebar__wrapper-content">
         <slot />
       </div>
