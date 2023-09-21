@@ -27,6 +27,11 @@ const router = createRouter({
       component: RecoveryPage,
       beforeEnter: () => (recoveryUser.value.id ? true : '/'),
     },
+    {
+      path: '/:catchAll(.*)',
+      name: 'home',
+      component: HomePage,
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
