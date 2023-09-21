@@ -56,7 +56,7 @@ const changeType = () => (tempType.value = tempType.value === 'text' ? 'password
     @apply relative;
     .input {
       &-text {
-        @apply pl-4 h-12 rounded-lg w-full outline-none relative z-[9];
+        @apply pl-4 h-12 rounded-lg w-full outline-none relative z-[8];
 
         &:focus {
           @apply outline-[3px] outline-blue-5;

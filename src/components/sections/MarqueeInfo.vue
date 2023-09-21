@@ -25,6 +25,6 @@ const marqueeText = computed(() =>
 
 <style lang="scss" scoped>
 .marquee {
-  @apply fixed z-[9] top-16 bg-blue-1 w-full text-center text-white font-bold py-1;
+  @apply fixed z-[9] top-16 bg-blue-1 w-full text-center text-white font-bold text-sm md:text-base py-0.5 md:py-1 ;
 }
 </style>

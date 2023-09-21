@@ -43,7 +43,7 @@ const updateValue = (e) => {
     @apply relative;
     .area {
       &-text {
-        @apply pl-4 pr-10 pt-3 rounded-lg w-full outline-none relative z-[9] resize-none;
+        @apply pl-4 pr-10 pt-3 rounded-lg w-full outline-none relative z-[8] resize-none;
 
         &:focus {
           @apply outline-[3px] outline-blue-5;

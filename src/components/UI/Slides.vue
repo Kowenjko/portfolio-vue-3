@@ -83,7 +83,7 @@ onMounted(() => {
 watch(windowWidth, correctWithSlider)
 
 useSwipe(trackRef, {
-  passive: false,
+  passive: true,
   onSwipeEnd(e: TouchEvent, direction: UseSwipeDirection) {
     if (direction === 'right') prevSlide()
     if (direction === 'left') nextSlide()
