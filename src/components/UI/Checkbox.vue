@@ -18,7 +18,7 @@ const changeInput = (event: Event) => {
 <template>
   <div class="checkbox-wrapper">
     <input id="checked-checkbox" type="checkbox" :checked="change" @change="changeInput" class="checkbox-input" />
-    <label for="checked-checkbox" class="checkbox-label">{{ label }}</label>
+    <label for="checked-checkbox" v-if="label" class="checkbox-label">{{ label }}</label>
   </div>
 </template>
 

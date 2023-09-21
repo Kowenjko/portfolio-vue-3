@@ -30,7 +30,7 @@ const cardTransform = computed(() => {
           <div class="hero__wrapper__left-back"></div>
           <div class="hero__wrapper__left-image" ref="avtarRef" :style="{ transform: cardTransform }">
             <div class="avatar">
-              <img src="/i-2.webp" alt="Kovenko" />
+              <img src="/i-3.webp" alt="Kovenko" />
             </div>
             <img class="lines" src="/lines.webp" alt="line" />
           </div>
@@ -56,7 +56,7 @@ const cardTransform = computed(() => {
 .hero {
   @apply dark:bg-purple-2 px-2;
   &__wrapper {
-    @apply flex flex-col md:flex-row space-x-2 items-center justify-center pt-24 md:pt-40 pb-14 md:pb-24 gap-7;
+    @apply flex flex-col md:flex-row space-x-2 items-center justify-center pt-32 md:pt-40 pb-14 md:pb-24 gap-7;
     &__left {
       @apply w-full md:w-1/3 md:order-1 flex md:block justify-center;
       &:hover &-back {
@@ -81,8 +81,8 @@ const cardTransform = computed(() => {
         .avatar {
           @apply absolute -bottom-10 -left-28  rounded-full overflow-hidden bg-purple-2 shadow-xl shadow-purple-2 transition-all duration-300;
           img {
-            filter: drop-shadow(1px 1px 30px #393861);
-            @apply w-96;
+            filter: drop-shadow(1px 1px 10px #393861);
+            @apply w-[346px];
           }
         }
         .lines {

@@ -1,18 +1,30 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+
+import type { IFormAuth } from '@/interfaces/Form'
+
 import SwitchTheme from './SwitchTheme.vue'
 import OpenSidebarButton from '@/components/UI/OpenSidebarButton.vue'
 import CloseButton from '@/components/UI/CloseButton.vue'
+import AuthAction from '@/components/AuthAction.vue'
 
 const showSidebar = ref(false)
 const openSidebar = () => (showSidebar.value = true)
 const closeSidebar = () => (showSidebar.value = false)
 
+interface Props {
+  userInfo?: IFormAuth
+}
+
+defineProps<Props>()
+
 const emit = defineEmits<{
   (e: 'openLogIn'): void
+  (e: 'logOut'): void
 }>()
 
 const openLogIn = () => emit('openLogIn')
+const logOut = () => emit('logOut')
 </script>
 
 <template>
@@ -21,8 +33,8 @@ const openLogIn = () => emit('openLogIn')
     <div class="sidebar__wrapper" :class="[showSidebar ? ' w-[60%]' : ' w-0']">
       <div class="sidebar__wrapper-top">
         <SwitchTheme />
-        <button @click="openLogIn" class="logo">Log in</button>
-        <CloseButton @click="closeSidebar" color="black"/>
+        <AuthAction :userInfo="userInfo" @log-out="logOut" @open-log-in="openLogIn" />
+        <CloseButton @click="closeSidebar" color="black" />
       </div>
 
       <div class="sidebar__wrapper-content">
@@ -34,7 +46,7 @@ const openLogIn = () => emit('openLogIn')
 
 <style lang="scss" scoped>
 .sidebar {
-  @apply fixed z-10 top-0 right-0 dark:bg-modal-dark bg-modal-light h-screen;
+  @apply fixed z-20 top-0 right-0 dark:bg-modal-dark bg-modal-light h-screen;
   &__wrapper {
     @apply dark:bg-purple-3 transition-all duration-700 absolute right-0 bg-white h-screen;
     &-top {

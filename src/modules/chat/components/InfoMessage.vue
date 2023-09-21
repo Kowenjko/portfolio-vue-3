@@ -1,7 +1,13 @@
+<script setup>
+defineProps({
+  text: { type: String },
+})
+</script>
+
 <template>
   <div class="no-message">
     <img width="35" class="avatar" src="/public/chat-gpt.png" alt="avatar" />
-    <h2 class="title">Please talk to me</h2>
+    <h2 class="title">{{ text }}</h2>
   </div>
 </template>
 

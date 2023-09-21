@@ -25,6 +25,8 @@ export function useAuth() {
     },
   ]
 
+  const NUMBER_AVAILABLE_MESSAGES = 10
+
   const logInRef = ref<InstanceType<typeof LogIn> | null>(null)
   const signUpRef = ref<InstanceType<typeof SignUp> | null>(null)
 
@@ -44,6 +46,12 @@ export function useAuth() {
   const userInfo = computed(() => users.value.find((user) => user.id === auth.value.id))
   const getUser = computed(() => users.value.find((user) => user.id === recoveryUser.value.id))
   const userIndex = computed(() => getUserIndex(userInfo.value?.id || ''))
+  const isAvailableMessages = computed(() => users.value[userIndex.value].messages.length > NUMBER_AVAILABLE_MESSAGES)
+  const countMessages = computed(() =>
+    users.value[userIndex.value].messages.length > 0
+      ? NUMBER_AVAILABLE_MESSAGES - users.value[userIndex.value].messages.length
+      : NUMBER_AVAILABLE_MESSAGES
+  )
 
   /**
    * function for user login
@@ -154,5 +162,8 @@ export function useAuth() {
     recoveryUser,
     getUserIndex,
     userIndex,
+    countMessages,
+    isAvailableMessages,
+    NUMBER_AVAILABLE_MESSAGES,
   }
 }

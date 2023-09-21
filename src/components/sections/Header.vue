@@ -9,6 +9,7 @@ import MobileHeader from '@/components/MobileHeader.vue'
 import LogIn from '../LogIn.vue'
 import SignUp from '../SignUp.vue'
 import ForgotPassword from '../ForgotPassword.vue'
+import AuthAction from '@/components/AuthAction.vue'
 
 import { useAuth } from '@/composables/useAuth'
 import type { NavigationLink } from '@/interfaces/Navigation'
@@ -76,13 +77,9 @@ const openForgotPassword = () => {
       <HeaderNavigation class="hidden md:flex" :links="links" />
       <div class="header__wrapper-desktop">
         <SwitchTheme />
-        <div v-if="userInfo?.id">
-          <span class="dark:text-white">{{ userInfo.logIn }} | </span>
-          <button class="logo" @click="logOut">Log out</button>
-        </div>
-        <button v-else @click="openLogIn" class="logo">Log in</button>
+        <AuthAction :userInfo="userInfo" @log-out="logOut" @open-log-in="openLogIn" />
       </div>
-      <MobileHeader @openLogIn="openLogIn">
+      <MobileHeader :userInfo="userInfo" @log-out="logOut" @openLogIn="openLogIn">
         <HeaderNavigation :links="links" />
       </MobileHeader>
     </div>

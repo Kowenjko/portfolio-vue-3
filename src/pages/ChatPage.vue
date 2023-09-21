@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 
 import InputMessage from '@/modules/chat/components/InputMessage.vue'
 import Button from '@/components/UI/Button.vue'
-import NoMessage from '@/modules/chat/components/NoMessage.vue'
+import InfoMessage from '@/modules/chat/components/InfoMessage.vue'
 import OutputMessage from '@/modules/chat/components/OutputMessage.vue'
 
 import { getAnswerGPT } from '@/api/services/ChatGPTService'
@@ -16,7 +16,7 @@ import { v4 as uuidv4 } from 'uuid'
 const isGenerate = ref(false)
 
 const { scrollChat } = useAutoScrollChat()
-const { users, userInfo, userIndex } = useAuth()
+const { users, userInfo, userIndex, isAvailableMessages } = useAuth()
 
 const answer =
   'ID of the model to use. See the model endpoint compatibility table for details on which models work with the Chat API.'
@@ -62,18 +62,22 @@ const sendQuestion = async (quastion: string) => {
     scrollChat()
   }, 2000)
 }
+
+watch(isAvailableMessages, () => window.scrollTo({ top: 0 }))
 </script>
 
 <template>
   <section class="chat">
     <div class="chat-wrapper container">
       <div class="messages">
-        <div v-show="!noMessages && !isGenerate" class="messages__clear-button">
+        <div v-show="!noMessages && !isGenerate " class="messages__clear-button">
           <Button @click="clearMessages">Clear Chat</Button>
         </div>
-        <NoMessage v-if="noMessages" />
+        <InfoMessage v-if="noMessages" text="Please talk to me" />
+        <InfoMessage v-if="isAvailableMessages" text="Sorry, your question limit has been reached" />
         <OutputMessage class="chat-output" v-if="userInfo?.messages" :messages="userInfo.messages" />
         <InputMessage
+          v-if="!isAvailableMessages"
           :class="[isGenerate ? 'opacity-0' : 'opacity-100']"
           class="chat-input"
           @sendQuestion="sendQuestion"
@@ -88,9 +92,9 @@ const sendQuestion = async (quastion: string) => {
   &-wrapper {
     @apply dark:bg-purple-3 bg-blue-3 relative min-h-screen  gap-3 pb-24;
     .messages {
-      @apply pt-28;
+      @apply pt-32;
       &__clear-button {
-        @apply absolute top-16 right-4 w-28;
+        @apply absolute top-24 right-4 w-28;
       }
     }
   }
