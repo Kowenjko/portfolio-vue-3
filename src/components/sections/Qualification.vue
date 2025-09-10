@@ -27,6 +27,11 @@ const qualification: Qualification = {
       city: 'Nexoft UG',
       date: '2021 - 2023',
     },
+    {
+      title: 'Web Development',
+      city: 'ABVV.Group',
+      date: '2023 - 2025',
+    },
   ],
 }
 </script>
