@@ -4,6 +4,35 @@ import Slides from '@/components/UI/Slides.vue'
 import type { Project } from '@/interfaces/ProjectsInterface'
 const workProjects: Project[] = [
   {
+    title: 'StoreInUa online store',
+    isGit: false,
+    href: 'https://storeinua.com',
+    keywords: ['Nuxt-3', 'I18n', 'Pinia', 'Vuelidate'],
+    category: 'Online Shop',
+    description:
+      'StoreInUa is a Ukrainian online store selling electronics and household appliances (including Apple products, smartphones, and laptops), offering low prices, official warranties, and fast delivery in Kyiv and throughout Ukraine.',
+    imageUrl: '/webp/tehko.webp',
+  },
+  {
+    title: 'Automatic processing of price lists',
+    isGit: false,
+    href: '#',
+    keywords: ['Vue', 'Vuetify', 'I18n', 'Pinia', 'Axios'],
+    category: 'Online service',
+    description:
+      'PM-Tehko is a service for automatic price and stock updates. It combines supplier price lists, competitor data, and content databases into a single Master Price List. Through its API, the service integrates with accounting systems and online stores, simplifying price management and increasing product competitiveness.',
+    imageUrl: '/webp/pm-tehko.webp',
+  },
+  {
+    title: 'Бідняжка Тур-клуб',
+    isGit: false,
+    href: '#',
+    keywords: ['Nuxt-3', 'Sass', 'I18n', 'Pinia'],
+    category: 'Travel agency',
+    description: 'Travel - within Ukraine and abroad, with the option of online booking of transport and hotels.',
+    imageUrl: '/webp/bidnyagka.webp',
+  },
+  {
     title: 'Jounce',
     isGit: false,
     href: 'https://app.jounce.ai/',

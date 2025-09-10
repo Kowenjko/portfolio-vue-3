@@ -6,4 +6,5 @@ export interface Project {
   category: string
   description: string
   imageUrl: string
+  url?: string
 }
