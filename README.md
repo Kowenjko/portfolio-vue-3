@@ -1,40 +1,89 @@
-# vue-portfolio
+# Vasyl Kovenko
 
-This template should help get you started developing with Vue 3 in Vite.
+**Frontend Developer**
 
-## Recommended IDE Setup
+📧 **Email:** [ortoswt@gmail.com](mailto:ortoswt@gmail.com)  
+💻 **GitHub:** [github.com/Kowenjko](https://github.com/Kowenjko)  
+🌐 **Portfolio:** [portfolio-vue-3.vercel.app](https://portfolio-vue-3.vercel.app)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+---
 
-## Type Support for `.vue` Imports in TS
+## 👤 About Me
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+Frontend Developer with 4+ years of commercial experience.  
+Specializing in **Vue 3 / Nuxt 3**, I build modern web applications with API integration and custom functionality.  
+Experienced in working with both Ukrainian and international clients.  
+Responsible, collaborative, and motivated to continuously improve skills and learn new technologies.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+---
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## 💼 Work Experience
 
-## Customize configuration
+### Frontend Developer
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+**ABVV.Group** | _2023 – 2025_ | _Ukraine_
 
-## Project Setup
+**Projects:**
 
-```sh
-npm install
-```
+- **StoreInUA** — online electronics store
+- **PM-Tehko** — automated price list processing
+- **Bidnyazhka** — travel club platform
 
-### Compile and Hot-Reload for Development
+**Responsibilities:**
 
-```sh
-npm run dev
-```
+- Frontend development using Nuxt 3, Vue 3
+- API integration and custom functionality implementation
+- UI/UX optimization
+- Collaboration with the team using Git, Jira, Trello
 
-### Type-Check, Compile and Minify for Production
+---
 
-```sh
-npm run build
-```
+### Frontend Developer
+
+**Nexoft UG** | _2021 – 2023_ | _Germany_
+
+**Projects:**
+
+- E-commerce stores on Shopify, Shopware
+- Web services with Vue 3 / Nuxt 3
+- Email marketing systems
+- Chatbot development
+
+**Responsibilities & Achievements:**
+
+- Built and customized e-commerce solutions
+- Integrated Firebase, JWT, openAPI
+- Developed UIs with Tailwind, Vuetify, Pinia
+- Communicated with clients and team via Jira, Slack, ClickUp
+
+---
+
+## 🎓 Educational & Volunteer Projects
+
+- **Python Online Marathon** | SoftServe IT Academy | _2021_
+  - Django project development, team collaboration, Git, Scrum
+
+- **“Kids Police” Chatbot** | Rivne Police Department | _2021_
+  - Website parsing, PostgreSQL database, teamwork on chatbot functionality
+
+---
+
+## 🛠 Technical Skills
+
+**Frontend:** Vue 3, Nuxt 3, React/Redux, Pinia, Tailwind, Vuetify, Bootstrap, Material UI  
+**Backend:** Django, Python (basic)  
+**E-commerce:** Shopify, Shopware  
+**Tools:** Git, Docker, VS Code, Jira, Trello, ClickUp, Figma, Photoshop, Miro  
+**Databases:** PostgreSQL, SQL  
+**OS:** Windows, Ubuntu
+
+---
+
+## 🎓 Education
+
+- **IT STEP Academy** (2020 – 2021) — Web Application Development with Python
+- **National University of Water and Environmental Engineering** (2001 – 2006) — Specialist in Automation and Computer-Integrated Systems
+
+---
+
+📌 **Open to new challenges and opportunities in frontend development.**
